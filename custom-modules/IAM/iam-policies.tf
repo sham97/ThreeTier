@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "Ec2-full-Access" {
-  name = "sham_policy"
+  name = var.Ec2-s3_full_access_name
 
   policy = jsonencode({
     Version = "2012-10-17",
@@ -41,7 +41,7 @@ data "aws_iam_policy_document" "assume_role1" {
 
 resource "aws_iam_group_policy" "developer_policy" {
   #name  = "developer_policy"
-  name = var.dev_po_name
+  name = "Developer-Policy"
   group = aws_iam_group.devops.name
   
   # Terraform's "jsonencode" function converts a
@@ -60,5 +60,80 @@ resource "aws_iam_group_policy" "developer_policy" {
   })
 }
 
+# resource "aws_iam_policy" "s3" {
+
+#   policy = jsondecode({
+    
+#         Version: "2012-10-17",
+#         Statement = [
+#             {
+#                 Effect: "Allow",
+#                 Principal: {
+#                     AWS: "arn:aws:iam::968017969736:user/sham"
+#                 },
+#                 Action: "s3:ListBucket",
+#                 Resource: "arn:aws:s3:::terraform-state-illthi"
+#             },
+#             {
+#                 Effect: "Allow",
+#                 Principal: {
+#                     AWS: "arn:aws:iam::968017969736:user/sham"
+#                 },
+#                 Action: [
+#                     "s3:GetObject",
+#                     "s3:PutObject"
+#                 ],
+#                 Resource: "arn:aws:s3:::terraform-state-illthi/*"
+#             }
+#         ]
+    
+#   })
+  
+# }
 
 
+# {
+#     "Version": "2012-10-17",
+#     "Statement": [
+#         {
+#             "Effect": "Allow",
+#             "Principal": {
+#                 "AWS":  "arn:aws:iam::968017969736:user/sham"
+#             },
+#             "Action": "s3:ListBucket",
+#             "Resource": "arn:aws:s3:::terraform-state-illthi"
+#         },
+#         { 
+#             "Effect": "Allow",
+#             "Principal": {
+#                 "AWS": "arn:aws:iam::968017969736:user/sham"
+#             },
+#             "Action": [
+#                 "s3:GetObject",
+#                 "s3:PutObject"
+#             ],
+#             "Resource": "arn:aws:s3:::terraform-state-illthi/*"
+#         }
+      
+#     ]
+# }
+
+
+# {
+#     "Version": "2012-10-17",
+#     "Statement": [
+#         {
+#             "Effect": "Allow",
+#             "Action": "s3:ListBucket",
+#             "Resource": "arn:aws:s3:::terraform-state-illthi"
+#         },
+#         {
+#             "Effect": "Allow",
+#             "Action": [
+#                 "s3:GetObject",
+#                 "s3:PutObject"
+#             ],
+#             "Resource": "arn:aws:s3:::terraform-state-illthi/*"
+#         }
+#     ]
+# }
