@@ -1,6 +1,7 @@
 #role creation 
 resource "aws_iam_role" "test_role" {
   name               = "S3-Access"
+  force_detach_policies = var.force_detach_policies
   assume_role_policy = data.aws_iam_policy_document.s3_full_access.json
   managed_policy_arns = [aws_iam_policy.Ec2-full-Access.arn]
   
