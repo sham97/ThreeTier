@@ -1,4 +1,4 @@
-name: "Terraform action"
+name: "Terraform action Down"
 on:
   workflow_dispatch:
   
