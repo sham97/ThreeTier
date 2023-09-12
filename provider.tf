@@ -9,7 +9,7 @@ terraform {
     # Replace this with your bucket name!
     # bucket         = "my-terraform-three-tier-role"
     # key            = "terraform.tfstate"
-    # region         = "us-east-1"
+    region         = "ap-southeast-1"
     # # profile        = "sham"
    }
 }
