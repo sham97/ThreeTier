@@ -7,16 +7,16 @@ terraform {
   }
    backend "s3" {
     # Replace this with your bucket name!
-    bucket         = "terraform-state-illthi"
-    key            = "terraform.tfstate"
-    region         = "ap-southeast-1"
-    profile        = "sham"
+    # bucket         = "my-terraform-three-tier-role"
+    # key            = "infra.tfstate"
+    # region         = "us-east-1"
+    # profile        = "sham"
    }
 }
 
 # Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-  profile = "sham"
+# provider "aws" {
+#   region = "us-east-1"
+#   profile = "sham"
   
-}
+# }
