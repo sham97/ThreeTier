@@ -7,9 +7,9 @@ terraform {
   }
    backend "s3" {
     # Replace this with your bucket name!
-    # bucket         = "my-terraform-three-tier-role"
-    # key            = "infra.tfstate"
-    # region         = "us-east-1"
+    bucket         = "my-terraform-three-tier-role"
+    key            = "infra.tfstate"
+    region         = "us-east-1"
     # profile        = "sham"
    }
 }
