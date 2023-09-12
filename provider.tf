@@ -19,6 +19,6 @@ terraform {
 provider "aws" {
   region = "us-east-1"
   # profile = "sham"
-  role_arn = "arn:aws:iam::968017969736:role/my-terraform-three-tier-role"
+  #role_arn = "arn:aws:iam::968017969736:role/my-terraform-three-tier-role"
   
 }
