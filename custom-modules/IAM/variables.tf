@@ -9,3 +9,8 @@ variable "force_detach_policies" {
   type = bool
   default = true
 }
+
+variable "users" {
+  type = string
+  
+}

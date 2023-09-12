@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "Ec2-full-Access" {
-  name = var.Ec2-s3_full_access_name
+  name = "ec2-ful-access"
 
   policy = jsonencode({
     Version = "2012-10-17",
