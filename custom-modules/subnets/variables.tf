@@ -11,5 +11,5 @@ variable "public_subnet_tag" {
 }
 
 variable "availability_zone" {
-   type = string
+   type = string  
 }
