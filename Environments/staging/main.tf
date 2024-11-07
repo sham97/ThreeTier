@@ -1,7 +1,7 @@
 module "IAM" {
     source = "./custom-modules/IAM"
 
-    users = var.user
+    users = var.owner_name
   
 }
 
